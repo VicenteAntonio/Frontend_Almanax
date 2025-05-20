@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 29% 96%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 214 59% 36%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 39 65% 75%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 294 5% 40%;
+    --accent-foreground: 355 100% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-dofus;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20fill%3D%22%23F4EEE0%22%20d%3D%22M11%2011h1v1h-1z%20M39%2011h1v1h-1z%20M55%2011h1v1h-1z%20M83%2011h1v1h-1z%20M11%2039h1v1h-1z%20M39%2039h1v1h-1z%20M55%2039h1v1h-1z%20M83%2039h1v1h-1z%20M11%2055h1v1h-1z%20M39%2055h1v1h-1z%20M55%2055h1v1h-1z%20M83%2055h1v1h-1z%20M11%2083h1v1h-1z%20M39%2083h1v1h-1z%20M55%2083h1v1h-1z%20M83%2083h1v1h-1z%22%2F%3E%3C%2Fsvg%3E');
+    background-size: 30px 30px;
+  }
+}
+
+.almanax-card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden border-2 border-dofus-gold transition-all duration-300;
+}
+
+.almanax-card:hover {
+  @apply shadow-xl transform -translate-y-1;
+}
+
+.dofus-button {
+  @apply bg-dofus-blue text-white px-4 py-2 rounded font-medium hover:bg-dofus-dark-blue transition-colors duration-200;
+}
+
+.offering-item {
+  @apply flex items-center gap-2 bg-dofus-light-brown p-3 rounded-md mt-2;
+}
+
+.data-loading {
+  @apply animate-pulse-light;
+}
